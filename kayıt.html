@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Kayıt Sayfası</title>
+    <title>Kayit </title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -65,7 +65,7 @@
     </style>
 </head>
 <body>
-    <h2>Kayıt Ol</h2>
+    <h2>Kayit Ol</h2>
     <form action="register.php" method="post">
         <label for="username">username:</label>
         <input type="text" id="username" name="username" required><br>
@@ -82,11 +82,7 @@
 
     <script>
         document.getElementById('registrationForm').addEventListener('submit', function (event) {
-            event.preventDefault(); // Formun otomatik gönderilmesini engelle
-
-            // Burada formun sunucuya gönderilmesi veya veritabanı doğrulaması yapılabilir
-            // Ancak burada form doğrulaması veya sunucu işlemleri için JavaScript kullanılması
-            // güvenlik açısından iyi bir uygulama değildir. Bu sadece örnek bir davranıştır.
+            event.preventDefault(); 
 
             // Doğrulama kodunu al
             const enteredCode = document.getElementById('code').value;
@@ -97,9 +93,6 @@
                 document.getElementById('errorText').textContent = "Geçersiz doğrulama kodu.";
                 return;
             }
-
-            // Form doğrulaması başarılı olduğunda kayıt işlemini gerçekleştir
-            // Burada gerçek bir kayıt işlemi veya sunucu işlemi yapılmalıdır.
             alert("Kayıt başarılı!");
         });
     </script>

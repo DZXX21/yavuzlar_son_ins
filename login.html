@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Giriş Sayfası</title>
+    <title>Login</title>
     <meta http-equiv="refresh" content="5;url=admin_panel.php">
     <style>
         body {
@@ -59,25 +59,20 @@
     </style>
 </head>
 <body>
-    <h2>Giriş Yap</h2>
+    <h2>Login</h2>
     <form action="login.php" method="post">
-        <label for="username">Kullanıcı Adı:</label>
+        <label for="username">username:</label>
         <input type="text" id="username" name="username" required>
 
-        <label for="password">Şifre:</label>
+        <label for="password">password:</label>
         <input type="password" id="password" name="password" required>
 
         <input type="submit" value="Giriş Yap">
     </form>
     <script>
            document.getElementById('loginForm').addEventListener('submit', function (event) {
-            event.preventDefault(); // Formun otomatik gönderilmesini engelle
+            event.preventDefault(); 
 
-            // Burada formun sunucuya gönderilmesi veya veritabanı doğrulaması yapılabilir
-            // Ancak burada form doğrulaması veya sunucu işlemleri için JavaScript kullanılması
-            // güvenlik açısından iyi bir uygulama değildir. Bu sadece örnek bir davranıştır.
-
-            // Form doğrulaması başarılı olduğunda yönlendirme yap
             window.location.href = "admin.php";
         });
     </script>
