@@ -2,17 +2,106 @@
 <html>
 <head>
     <title>Kayıt Sayfası</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 50px;
+            color: #333;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 30px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 3px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
     <h2>Kayıt Ol</h2>
     <form action="register.php" method="post">
-        <label for="username">Kullanıcı Adı:</label>
+        <label for="username">username:</label>
         <input type="text" id="username" name="username" required><br>
 
-        <label for="password">Şifre:</label>
+        <label for="password">password:</label>
         <input type="password" id="password" name="password" required><br>
 
+        <label for="code">code:</label>
+        <input type="text" id="code" name="code" required><br>
+
         <input type="submit" value="Kayıt Ol">
+        <div class="error-message" id="errorText"></div>
     </form>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Formun otomatik gönderilmesini engelle
+
+            // Burada formun sunucuya gönderilmesi veya veritabanı doğrulaması yapılabilir
+            // Ancak burada form doğrulaması veya sunucu işlemleri için JavaScript kullanılması
+            // güvenlik açısından iyi bir uygulama değildir. Bu sadece örnek bir davranıştır.
+
+            // Doğrulama kodunu al
+            const enteredCode = document.getElementById('code').value;
+            const validCode = "123456"; // Geçerli kodu buraya girin
+
+            // Doğrulama kontrolü yap
+            if (enteredCode !== validCode) {
+                document.getElementById('errorText').textContent = "Geçersiz doğrulama kodu.";
+                return;
+            }
+
+            // Form doğrulaması başarılı olduğunda kayıt işlemini gerçekleştir
+            // Burada gerçek bir kayıt işlemi veya sunucu işlemi yapılmalıdır.
+            alert("Kayıt başarılı!");
+        });
+    </script>
 </body>
 </html>
