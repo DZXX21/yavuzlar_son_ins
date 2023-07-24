@@ -42,69 +42,7 @@ mysqli_close($connection);
 <html>
 <head>
     <title>Admin Panel</title>
-    <title>Admin Panel</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-        }
-
-        h1, h2 {
-            text-align: center;
-            margin-top: 30px;
-            color: #333;
-        }
-
-        p {
-            text-align: center;
-            color: #555;
-        }
-
-        table {
-            margin: 30px auto;
-            border-collapse: collapse;
-            width: 80%;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        }
-
-        th, td {
-            padding: 12px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-
-        tr:hover {
-            background-color: #f5f5f5;
-        }
-
-        form {
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        input[type="submit"] {
-            padding: 10px 20px;
-            background-color: #007bff;
-            border: none;
-            border-radius: 3px;
-            color: #fff;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #0056b3;
-        }
-    </style>
 </head>
-
 <body>
     <h1>Hoş Geldiniz, <?php echo $username; ?>!</h1>
     <p>Bu sayfa sadece yöneticilere özeldir.</p>
